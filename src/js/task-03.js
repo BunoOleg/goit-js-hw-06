@@ -12,13 +12,11 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-
-const ulEl = document.querySelector(".gallery");
-const makeGalleryFromArray = images
+const listEl = document.querySelector(".gallery");
+const markup = images
   .map(
-    (image) =>
-      `<li><img src = ${image.url} alt = ${image.alt} width = 320></li>`
+    (image) => `<li> <img src= ${image.url} alt= ${image.alt} width = 320></li>`
   )
   .join("");
-ulEl.insertAdjacentHTML("beforeend", makeGalleryFromArray);
-console.log(makeGalleryFromArray);
+listEl.insertAdjacentHTML("beforeend", markup);
+console.log(markup);
